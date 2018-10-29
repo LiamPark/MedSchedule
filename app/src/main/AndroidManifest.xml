@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.liam.medschedule">
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+
+        <activity android:name=".SplashActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ScheduleActivity"></activity>
+
+        <activity
+            android:name=".AddMedicineActivity"
+            android:focusableInTouchMode="true"
+            android:label="Add Medicine"
+            android:parentActivityName=".ScheduleActivity"
+            android:windowSoftInputMode="adjustResize">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.liam.medschedule.ScheduleActivity" />
+        </activity>
+
+        <activity
+            android:name=".EditMedicineActivity"
+            android:focusableInTouchMode="true"
+            android:label="Edit Medicine"
+            android:parentActivityName=".ScheduleActivity"
+            android:windowSoftInputMode="adjustResize">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.liam.medschedule.ScheduleActivity" />
+        </activity>
+    </application>
+
+</manifest>
